@@ -2,7 +2,8 @@
 
 ![](https://github.com/smithashley/Yelp-ETL-Viz/blob/main/embedded_images/aws_diag.png)
 
-This project extracts JSON data from Amazon S3 into a dataframe, transforms the data, loads to the data warehouse, creates two more tables using Redshift queries, connects to Tableau server and visualizes the data on a dashboard.
+This project extracted JSON data from Amazon S3 into a dataframe, transformed the data, loaded to the data warehouse, created two more tables using queries in Redshift, connected Redshift to Tableau server,  and visualized the data on a dashboard.
+  - The yelp reviews were filtered given the hypothetical search for businesses that sell pizza and served wine for pairing in these metropolitan areas. 
 
 ## About the Dataset
 - This dataset is a subset of businesses, reviews, and user data across 10 metropolitan areas
@@ -17,16 +18,23 @@ Steps for ETL in Databricks
 - Mounted S3 storage in Databricks notebook
 - Listed objects in S3
 - Read in data with given path from list
-- Cleaned columns as needed
-- Downloaded JDBC driver, spark-redshift package, spark-avro package, AWS java sdk
+- Transformed data
+  - Dropped columns as needed
+  - Extracted nested JSON
+  - Filtered dataframe
+- Installed JDBC driver, spark-redshift package, spark-avro package, and AWS java sdk on cluster
 - Configured the connection to Amazon Redshift
 - Wrote data to the data warehouse
-
+- Unmounted S3 storage
 
 ## Data Warehouse Queries
 ![](https://github.com/smithashley/Yelp-ETL-Viz/blob/main/embedded_images/query1.png)
-![](https://github.com/smithashley/Yelp-ETL-Viz/blob/main/embedded_images/query2.png)
-
+- Created a left join as the business table was filtered for businesses that sell pizza before being loaded to the data warehouse
+![](https://github.com/smithashley/Yelp-ETL-Viz/blob/main/embedded_images/query_2.png)
+- Created a query that 
 ## Data Visualization
 ![](https://github.com/smithashley/Yelp-ETL-Viz/blob/main/embedded_images/tableau_screenshot2.png)
-[This link will take you to the Tableau dashboard]()
+Created an interactive dashboard with three visualizations
+- Average stars for each Pizzeria -> to find highest rated restaurant in each city
+- Reviews by City, State -> comparing reviews with and without pairing  
+- Average stars by state -> map out states that have highest reviewed pizza
