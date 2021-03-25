@@ -30,8 +30,12 @@ Steps for ETL in Databricks
 ## Data Warehouse Queries
 ![](https://github.com/smithashley/Yelp-ETL-Viz/blob/main/embedded_images/query1.png)
 - Created a left join as the business table was filtered for businesses that sell pizza before being loaded to the data warehouse
+
+
 ![](https://github.com/smithashley/Yelp-ETL-Viz/blob/main/embedded_images/query_2.png)
-- Created a query that 
+- Created a query that filters the table based on the condition that the pairing column contains 'wine'
+
+
 ## Data Visualization
 ![](https://github.com/smithashley/Yelp-ETL-Viz/blob/main/embedded_images/tableau_screenshot2.png)
 Created an interactive dashboard with three visualizations
