@@ -1,9 +1,10 @@
 # Databricks notebook source
+
 #mount object storage
-access_key = 'AKIASNRX6T33AHZNZJUL'
-secret_key = '5RWeYHwc2W6Fo8bBxfW5EFSx0vgfcv8D0JDkq2TZ'
+access_key = '<insert_access_key>'
+secret_key = '<insert_secret_key>'
 encoded_secret_key = secret_key.replace('/', '%2F')
-aws_bucket_name = 'yelpdata321'
+aws_bucket_name = '<insert_bucket_name>'
 mount_name = 'yelp_data'
 
 dbutils.fs.mount('s3a://%s:%s@%s' % (access_key, encoded_secret_key, aws_bucket_name), '/mnt/%s' % mount_name)
@@ -70,8 +71,8 @@ business_table.show()
 
 # COMMAND ----------
 
-jdbcurl='jdbc:redshift://afsmithcodes.cqb09qjhxszz.us-east-1.redshift.amazonaws.com:5439/yelpdw?user=afsmithcodes&password=LOVE4life$'
-tempdir='s3a://AKIASNRX6T33AHZNZJUL:5RWeYHwc2W6Fo8bBxfW5EFSx0vgfcv8D0JDkq2TZ@yelpdata321/tempdir/'
+jdbcurl='<insert_jdbc_url_here>'
+tempdir='<insert_tempdir_path_here>'
 
 # COMMAND ----------
 
