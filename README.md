@@ -1,9 +1,11 @@
 # Yelp ETL and Visualization
 
+![](https://github.com/smithashley/Yelp-ETL-Viz/blob/main/embedded_images/aws_diag.png)
+
 This project extracts JSON data from Amazon S3 into a dataframe, transforms the data, loads to the data warehouse, creates two more tables using Redshift queries, connects to Tableau server and visualizes the data on a dashboard.
 
 ## About the Dataset
-- This dataset is a subset of businesses, reviews, and user data across 10 metropolitan areas: Montreal, Calgary, Toronto, Pittsburgh, Charlotte, Urbana-Champaign, Phoenix, Las Vegas, Madison, and Cleveland. Only reviews that Yelp recommended at the time of data collection were included.
+- This dataset is a subset of businesses, reviews, and user data across 10 metropolitan areas
 - This amounts to 8,021,122 reviews of 209,393 businesses (10 GB of data)
 - Dataset is available here: https://www.yelp.com/dataset
 - Example of the format
@@ -20,6 +22,11 @@ Steps for ETL in Databricks
 - Configured the connection to Amazon Redshift
 - Wrote data to the data warehouse
 
+
+## Data Warehouse Queries
+![](https://github.com/smithashley/Yelp-ETL-Viz/blob/main/embedded_images/query1.png)
+![](https://github.com/smithashley/Yelp-ETL-Viz/blob/main/embedded_images/query2.png)
+
 ## Data Visualization
-![]()
+![](https://github.com/smithashley/Yelp-ETL-Viz/blob/main/embedded_images/tableau_screenshot2.png)
 [This link will take you to the Tableau dashboard]()
